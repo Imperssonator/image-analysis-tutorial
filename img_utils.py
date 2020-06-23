@@ -45,7 +45,13 @@ def n_imshow(img_list,
                              tight_layout=True)
     
     for ii,ax in enumerate(axes.ravel()):
-        ax = imshow(img_list[ii], ax=ax)
+        ax = imshow(img_list[ii],
+                    cmap=cmap,
+                    axis=axis,
+                    ax=ax,
+                    title=titles[ii],
+                    zoom=zoom,
+                    )
     
     return fig, axes
 
